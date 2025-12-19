@@ -1,0 +1,29 @@
+{
+  "name": "ticket_alerting_system",
+  "version": "1.0.0",
+  "description": "A comprehensive ticket management and alerting system for handling support tickets across different departments, with role-based access control and workflow management.",
+  "main": "index.js",
+  "scripts": {
+    "dev": "concurrently \"npm run redis\" \"npm run server\" \"npm run client\"",
+    "server": "cd backend && npm run dev",
+    "client": "cd frontend && npm run dev",
+    "redis": "wsl redis-server",
+    "install-all": "npm install && cd backend && npm install && cd ../frontend && npm install",
+    "install-deps": "npm install && concurrently \"cd backend && npm install\" \"cd frontend && npm install\""
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.0"
+  },
+
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/techm-bfsi-sbi/Ticket_Alerting_System.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/techm-bfsi-sbi/Ticket_Alerting_System/issues"
+  },
+  "homepage": "https://github.com/techm-bfsi-sbi/Ticket_Alerting_System#readme"
+}

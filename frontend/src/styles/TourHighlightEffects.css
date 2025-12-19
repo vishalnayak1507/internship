@@ -1,0 +1,323 @@
+/* Enhanced highlighting effects for tour components */
+
+.tour-highlight {
+  position: relative !important;
+  z-index: 10000 !important;
+  pointer-events: auto !important;
+  transform: scale(1.03) !important;
+  transition: all 0.3s ease-in-out !important;
+  filter: none !important; 
+  -webkit-filter: none !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+  box-shadow: 0 0 30px rgba(25, 118, 210, 0.9), 0 0 0 4px rgba(25, 118, 210, 0.5) !important;
+  border-radius: 4px !important;
+  outline: 3px solid rgba(25, 118, 210, 0.8) !important;
+  outline-offset: 3px !important;
+  animation: highlight-pulse-blue 1.5s infinite alternate !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+  display: block !important;
+}
+
+/* Ensure the backdrop-filter doesn't affect highlighted elements */
+.tour-highlight * {
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+}
+
+/* Specific card type highlights */
+.ticket-card-in-progress.tour-highlight {
+  box-shadow: 0 0 30px rgba(255, 170, 0, 0.9), 0 0 0 4px rgba(255, 170, 0, 0.5) !important;
+  outline: 2px solid rgba(255, 170, 0, 0.8) !important;
+  animation: highlight-pulse-orange 1.5s infinite alternate !important;
+}
+
+.ticket-card-resolved.tour-highlight {
+  box-shadow: 0 0 30px rgba(94, 53, 177, 0.9), 0 0 0 4px rgba(94, 53, 177, 0.5) !important;
+  outline: 2px solid rgba(94, 53, 177, 0.8) !important;
+  animation: highlight-pulse-purple 1.5s infinite alternate !important;
+}
+
+.ticket-card-closed.tour-highlight {
+  box-shadow: 0 0 30px rgba(56, 142, 60, 0.9), 0 0 0 4px rgba(56, 142, 60, 0.5) !important;
+  outline: 2px solid rgba(56, 142, 60, 0.8) !important;
+  animation: highlight-pulse-green 1.5s infinite alternate !important;
+}
+
+.ticket-card-sla-breached.tour-highlight {
+  box-shadow: 0 0 30px rgba(211, 47, 47, 0.9), 0 0 0 4px rgba(211, 47, 47, 0.5) !important;
+  outline: 2px solid rgba(211, 47, 47, 0.8) !important;
+  animation: highlight-pulse-red 1.5s infinite alternate !important;
+}
+
+/* Analyst page specific highlights */
+.search-box.tour-highlight,
+.search-filter-container.tour-highlight,
+.filter-dropdown-container.tour-highlight,
+input[type="text"].tour-highlight,
+input[placeholder*="Search"].tour-highlight,
+.analyst-card.tour-highlight,
+.ticket-stat-box.tour-highlight {
+  box-shadow: 0 0 30px rgba(25, 118, 210, 0.9), 0 0 0 4px rgba(25, 118, 210, 0.5) !important;
+  outline: 3px solid rgba(25, 118, 210, 0.8) !important;
+  animation: highlight-pulse-blue 1.5s infinite alternate !important;
+  z-index: 10000 !important;
+  position: relative !important;
+  filter: none !important;
+  -webkit-filter: none !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+}
+.analyst-table-highlight {
+  box-shadow: 0 0 30px rgba(25, 118, 210, 0.9), 0 0 0 4px rgba(25, 118, 210, 0.7) !important;
+  outline: 3px solid rgba(25, 118, 210, 0.9) !important;
+  z-index: 99990 !important;
+  position: relative !important;
+  transform: scale(1.02) !important;
+}
+
+.analyst-filter-highlight {
+  box-shadow: 0 0 30px rgba(156, 39, 176, 0.9), 0 0 0 4px rgba(156, 39, 176, 0.7) !important;
+  outline: 3px solid rgba(156, 39, 176, 0.9) !important;
+  z-index: 99990 !important;
+  position: relative !important;
+  transform: scale(1.02) !important;
+}
+
+.analyst-stats-highlight {
+  box-shadow: 0 0 30px rgba(76, 175, 80, 0.9), 0 0 0 4px rgba(76, 175, 80, 0.7) !important;
+  outline: 3px solid rgba(76, 175, 80, 0.9) !important;
+  z-index: 99990 !important;
+  position: relative !important;
+  transform: scale(1.02) !important;
+}
+
+/* Tickets page specific highlights - PROFESSIONAL STYLE */
+.tickets-filter-highlight {
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.7), 0 0 20px 4px rgba(59, 130, 246, 0.5) !important;
+  z-index: 99999 !important;
+  position: relative !important;
+  transform: none !important;
+  filter: none !important;
+  -webkit-filter: none !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+  transition: box-shadow 0.3s ease !important;
+  border-radius: 8px !important;
+  outline: none !important;
+  animation: tickets-filter-pulse 1.5s infinite alternate !important;
+}
+
+.tickets-table-highlight {
+  box-shadow: 0 0 30px rgba(76, 175, 80, 0.9), 0 0 0 4px rgba(76, 175, 80, 0.7) !important;
+  outline: 3px solid rgba(76, 175, 80, 0.9) !important;
+  z-index: 99990 !important;
+  position: relative !important;
+  transform: scale(1.02) !important;
+}
+
+.tickets-pagination-highlight,
+.tickets-refresh-highlight {
+  box-shadow: 0 0 30px rgba(255, 152, 0, 0.9), 0 0 0 4px rgba(255, 152, 0, 0.7) !important;
+  outline: 3px solid rgba(255, 152, 0, 0.9) !important;
+  z-index: 99990 !important;
+  position: relative !important;
+  transform: scale(1.02) !important;
+}
+
+.tickets-card-highlight {
+  box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.7), 0 0 20px 4px rgba(16, 185, 129, 0.5) !important;
+  z-index: 99999 !important; /* Increased z-index to match other elements */
+  position: relative !important;
+  transform: none !important;
+  filter: none !important;
+  -webkit-filter: none !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+  transition: box-shadow 0.3s ease !important;
+  border-radius: 8px !important; /* Increased border radius to match other elements */
+  outline: none !important;
+  animation: tickets-card-pulse 1.5s infinite alternate !important; /* Added animation to match other elements */
+}
+
+.tickets-tabs-highlight {
+  box-shadow: 0 0 0 3px rgba(139, 92, 246, 0.7), 0 0 20px 4px rgba(139, 92, 246, 0.5) !important;
+  z-index: 99999 !important;
+  position: relative !important;
+  transform: none !important;
+  filter: none !important;
+  -webkit-filter: none !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+  transition: box-shadow 0.3s ease !important;
+  border-radius: 8px !important;
+  outline: none !important;
+  animation: tickets-tabs-pulse 1.5s infinite alternate !important;
+}
+
+.tickets-refresh-highlight {
+  box-shadow: 0 0 0 3px rgba(245, 158, 11, 0.7), 0 0 20px 4px rgba(245, 158, 11, 0.5) !important;
+  z-index: 99999 !important;
+  position: relative !important;
+  transform: none !important;
+  filter: none !important;
+  -webkit-filter: none !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+  transition: box-shadow 0.3s ease !important;
+  border-radius: 8px !important;
+  outline: none !important;
+  animation: tickets-refresh-pulse 1.5s infinite alternate !important;
+}
+
+.tickets-pagination-highlight {
+  box-shadow: 0 0 30px rgba(121, 85, 72, 0.9), 0 0 0 4px rgba(121, 85, 72, 0.7) !important;
+  outline: 3px solid rgba(121, 85, 72, 0.9) !important;
+  z-index: 99990 !important;
+  position: relative !important;
+}
+
+/* Upload page specific highlights */
+div[class*="border-dashed"].tour-highlight,
+div[class*="border-2"].tour-highlight,
+div[class*="rounded-xl"].tour-highlight,
+div[class*="border-blue-200"].tour-highlight,
+div[class*="border-blue-500"].tour-highlight,
+div[onclick*="inputRef"].tour-highlight {
+  box-shadow: 0 0 30px rgba(25, 118, 210, 0.9), 0 0 0 4px rgba(25, 118, 210, 0.5) !important;
+  outline: 3px solid rgba(25, 118, 210, 0.8) !important;
+  animation: highlight-pulse-blue 1.5s infinite alternate !important;
+  z-index: 10000 !important;
+  position: relative !important;
+  filter: none !important;
+  -webkit-filter: none !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+}
+
+/* Professional overlay matching the screenshots */
+.tour-overlay {
+  background-color: rgba(15, 23, 42, 0.7) !important;
+  backdrop-filter: blur(2px) !important;
+  -webkit-backdrop-filter: blur(2px) !important;
+  z-index: 9990 !important;
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100vw !important;
+  height: 100vh !important;
+  transition: all 0.3s ease !important;
+  pointer-events: none !important;
+}
+
+/* Enhanced keyframes for more prominent animation */
+@keyframes highlight-pulse-orange {
+  0% {
+    box-shadow: 0 0 20px rgba(255, 170, 0, 0.7), 0 0 0 4px rgba(255, 170, 0, 0.4);
+    outline-offset: 2px;
+  }
+  100% {
+    box-shadow: 0 0 35px rgba(255, 170, 0, 0.9), 0 0 0 6px rgba(255, 170, 0, 0.5);
+    outline-offset: 4px;
+  }
+}
+
+@keyframes highlight-pulse-purple {
+  0% {
+    box-shadow: 0 0 20px rgba(94, 53, 177, 0.7), 0 0 0 4px rgba(94, 53, 177, 0.4);
+    outline-offset: 2px;
+  }
+  100% {
+    box-shadow: 0 0 35px rgba(94, 53, 177, 0.9), 0 0 0 6px rgba(94, 53, 177, 0.5);
+    outline-offset: 4px;
+  }
+}
+
+@keyframes highlight-pulse-green {
+  0% {
+    box-shadow: 0 0 20px rgba(56, 142, 60, 0.7), 0 0 0 4px rgba(56, 142, 60, 0.4);
+    outline-offset: 2px;
+  }
+  100% {
+    box-shadow: 0 0 35px rgba(56, 142, 60, 0.9), 0 0 0 6px rgba(56, 142, 60, 0.5);
+    outline-offset: 4px;
+  }
+}
+
+@keyframes highlight-pulse-red {
+  0% {
+    box-shadow: 0 0 20px rgba(211, 47, 47, 0.7), 0 0 0 4px rgba(211, 47, 47, 0.4);
+    outline-offset: 2px;
+  }
+  100% {
+    box-shadow: 0 0 35px rgba(211, 47, 47, 0.9), 0 0 0 6px rgba(211, 47, 47, 0.5);
+    outline-offset: 4px;
+  }
+}
+
+@keyframes highlight-pulse-blue {
+  0% {
+    box-shadow: 0 0 20px rgba(25, 118, 210, 0.7), 0 0 0 4px rgba(25, 118, 210, 0.4);
+    outline-offset: 2px;
+  }
+  100% {
+    box-shadow: 0 0 35px rgba(25, 118, 210, 0.9), 0 0 0 6px rgba(25, 118, 210, 0.5);
+    outline-offset: 4px;
+  }
+}
+
+/* Ticket page specific animations */
+/* Professional subtle animations matching the screenshot style */
+@keyframes tickets-filter-pulse {
+  0% {
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.7), 0 0 12px 2px rgba(59, 130, 246, 0.4);
+  }
+  100% {
+    box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.8), 0 0 25px 5px rgba(59, 130, 246, 0.6);
+  }
+}
+
+@keyframes tickets-card-pulse {
+  0% {
+    box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.7), 0 0 12px 2px rgba(16, 185, 129, 0.4);
+  }
+  100% {
+    box-shadow: 0 0 0 4px rgba(16, 185, 129, 0.8), 0 0 25px 5px rgba(16, 185, 129, 0.6);
+  }
+}
+
+@keyframes tickets-tabs-pulse {
+  0% {
+    box-shadow: 0 0 0 3px rgba(139, 92, 246, 0.7), 0 0 12px 2px rgba(139, 92, 246, 0.4);
+  }
+  100% {
+    box-shadow: 0 0 0 4px rgba(139, 92, 246, 0.8), 0 0 25px 5px rgba(139, 92, 246, 0.6);
+  }
+}
+
+@keyframes tickets-refresh-pulse {
+  0% {
+    box-shadow: 0 0 0 3px rgba(245, 158, 11, 0.7), 0 0 12px 2px rgba(245, 158, 11, 0.4);
+  }
+  100% {
+    box-shadow: 0 0 0 4px rgba(245, 158, 11, 0.8), 0 0 25px 5px rgba(245, 158, 11, 0.6);
+  }
+}
+
+@keyframes pulse-border {
+  0% {
+    box-shadow: 0 0 0 0px rgba(37, 99, 235, 0.5);
+  }
+  100% {
+    box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.0);
+  }
+}
